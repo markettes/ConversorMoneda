@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="311.0" prefWidth="299.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="conversormoneda.FXMLDocumentController">
+   <children>
+      <Slider fx:id="convSlider" blockIncrement="0.1" layoutX="16.0" layoutY="22.0" max="2.0" prefHeight="14.0" prefWidth="267.0" showTickLabels="true" showTickMarks="true" />
+      <Label fx:id="conversionText" layoutX="39.0" layoutY="80.0" text="Conversion Rate: ">
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+      </Label>
+      <Label layoutX="41.0" layoutY="118.0" text="Input">
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+      </Label>
+      <Label layoutX="39.0" layoutY="151.0" text="Output">
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="inputField" layoutX="121.0" layoutY="114.0" prefHeight="25.0" prefWidth="115.0" />
+      <TextField fx:id="outputField" editable="false" layoutX="121.0" layoutY="148.0" prefHeight="25.0" prefWidth="115.0" />
+      <Button fx:id="convBut" defaultButton="true" layoutX="112.0" layoutY="199.0" mnemonicParsing="false" onAction="#convertAct" text="Convert" />
+      <Button layoutX="192.0" layoutY="199.0" mnemonicParsing="false" onAction="#clearAct" text="Clear" />
+      <Separator layoutX="9.0" layoutY="255.0" prefHeight="6.0" prefWidth="279.0" />
+      <CheckBox fx:id="checkV" layoutX="16.0" layoutY="267.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="156.0" text="Automatic conversion" />
+   </children>
+</AnchorPane>
